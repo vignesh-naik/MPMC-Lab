@@ -5,6 +5,8 @@ section .data
 	len2 equ $ -msg2
 	msg3 db "The sum is : "
 	len3 equ $ -msg3
+	msg4 db "", 10, 13
+	len4 equ $ -msg4
 
 section .bss
 	num1 resb 5
@@ -59,5 +61,11 @@ _start:
 	mov edx, 1
 	int 80h
     
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, msg4
+	mov edx, len4
+	int 80h
+
 	mov eax, 1					
 	int 80h	
