@@ -1,4 +1,4 @@
-;ALP to accept 2 numbers and display
+;ALP to accept 1 number and display
 
 section .data
 	msg1 db "Enter First number : "
